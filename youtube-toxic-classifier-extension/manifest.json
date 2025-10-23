@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Toxic Comment Classifier",
+  "version": "1.0",
+  "description": "Classifies YouTube comments as Clean, Offensive, or Toxic using the Gemini API.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["src/content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "128": "src/styles/icon.png"
+    }
+  },
+  "icons": {
+    "128": "src/styles/icon.png"
+  }
+}
