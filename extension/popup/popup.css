@@ -1,0 +1,132 @@
+body {
+    font-family: 'Be Vietnam Pro', 'Segoe UI', Arial, sans-serif;
+    min-width: 300px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+h3 {
+    margin-top: 0;
+    color: #1565c0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+
+.version {
+    font-size: 10px; /* Make the font size smaller */
+    color: #666;
+    position: relative; /* Change to relative for better positioning */
+    margin-top: 5px; /* Add some space above the version text */
+    margin-bottom: 15px; /* Adjust bottom margin if needed */
+    text-align: center; /* Center the version text */
+}
+
+.status-container {
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 15px;
+}
+
+#status {
+    font-weight: 500;
+    color: #28a745;
+}
+
+.toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+#scan, #hideToxic {
+    flex: 1;
+    padding: 12px;
+    background-color: #1565c0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+#hideToxic {
+    background-color: #dc3545;
+}
+
+#hideToxic:hover {
+    background-color: #c82333;
+}
+
+#scan:hover {
+    background-color: #1976d2;
+}
+
+#scan:active, #hideToxic:active {
+    transform: scale(0.98);
+}
+
+.result-box {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #333;
+    padding: 6px;
+    border-top: 1px solid #eee;
+}

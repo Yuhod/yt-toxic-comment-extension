@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Youtube Toxic Classifier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <h3>Tool Toxic Classifier</h3>
+    <span class="version">v1.0</span>
+    
+    <div class="status-container">
+        <p>Status: <span id="status">Running</span></p>
+    </div>
+    
+    <div class="toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="toggleExtension" checked>
+            <span class="slider"></span>
+        </label>
+    </div>
+    
+    <div class="button-container">
+        <button id="scan">Rescan Comments</button>
+        <button id="hideToxic">Hide Toxic</button>
+    </div>
+    <div id="result" class="result-box"></div>
+    <script src="popup.js"></script>
+</body>
+</html>
